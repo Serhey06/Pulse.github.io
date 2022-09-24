@@ -1,0 +1,15 @@
+@import url('/sass/base/_variables.scss');
+@import url('/sass/base/_mixins.scss');
+
+*{
+    font-family: 'Museo Sans Cyrl' sans-serif;
+}
+
+.container{
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+@import url('/sass/blocks/_header.scss');
+@import url('/sass/blocks/_promo.scss');
+
