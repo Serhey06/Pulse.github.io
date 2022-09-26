@@ -17,7 +17,7 @@ gulp.task("server", function () {
 
 gulp.task("styles", function () {
   return gulp
-    .src(`${currentDir}/sass/**/*.scss`)
+    .src(`${currentDir}/sass/**/*.+(scss|sass)`)
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
     .pipe(rename({
         prefix: "",
@@ -29,12 +29,7 @@ gulp.task("styles", function () {
 });
 
 gulp.task("watch", function () {
-  gulp.watch((`${currentDir}/sass/**/*.scss`), gulp.parallel("styles"));
-/*   gulp.watch(`${currentDir}/sass/base/_mixins.scss`, gulp.parallel("styles"));
-  gulp.watch(`${currentDir}/sass/base/_variables.scss`, gulp.parallel("styles"));
-  gulp.watch(`${currentDir}/sass/blocks/_promo.scss`, gulp.parallel("styles"));
-  gulp.watch(`${currentDir}/sass/blocks/_header.scss`, gulp.parallel("styles"));
-  gulp.watch(`${currentDir}/sass/blocks/_header.scss`, gulp.parallel("styles")); */
+  gulp.watch('./sass/**/*.scss', gulp.parallel("styles"));
   gulp.watch(`${currentDir}/index.html`).on("change", browserSync.reload);
 });
 

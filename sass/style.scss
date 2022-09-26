@@ -1,15 +1,22 @@
-@import url('/sass/base/_variables.scss');
-@import url('/sass/base/_mixins.scss');
+@import "base/variables";
+@import "base/mixins";
 
 *{
     font-family: 'Museo Sans Cyrl' sans-serif;
 }
 
 .container{
+    margin: 100px;
     max-width: 950px;
     margin: 0 auto;
 }
 
-@import url('/sass/blocks/_header.scss');
-@import url('/sass/blocks/_promo.scss');
+@import "blocks/header";
+@import "blocks/promo";
+
+
+
+
+
+
 
